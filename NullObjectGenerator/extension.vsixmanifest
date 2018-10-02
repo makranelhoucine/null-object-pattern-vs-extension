@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" 
       xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-  <Identifier Id="3511147C-D6E3-46C8-B2A9-0E0E971B60D5">
+  <Identifier Id="NullObjectGenerator">
     <Name>NullObject Pattern Generator</Name>
     <Author>Julien Vandenbussche</Author>
     <Version>1.0.0.0</Version>
-    <Description xml:space="preserve">NullObject Pattern Generator</Description>
+    <Description xml:space="preserve">Permet de generer les classes permettant de repondre au Pattern NullObject</Description>
     <Icon>NullObject.ico</Icon>
     <SupportedProducts>
       <VisualStudio Version="12.0">

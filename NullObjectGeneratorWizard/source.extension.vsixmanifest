@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="NullObjectGeneratorWizard.b7caa06e-ffae-430a-8e32-867b67473065" Version="1.0" Language="en-US" Publisher="Julien Vandenbussche" />
+        <Identity Id="NullObjectGenerator" Version="1.0" Language="en-US" Publisher="Null object generator" />
+        <Author>Julien Vandenbussche</Author>
         <DisplayName>Null object generator</DisplayName>
         <Description xml:space="preserve">Permet de generer les classes permettant de repondre au Pattern NullObject</Description>
         <MoreInfo>https://github.com/ng-julien/null-object-pattern</MoreInfo>
-        <Tags>NullObject Pattern Null </Tags>
+        <Tags>NullObject Pattern Null</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[12.0, 16.0)" />
