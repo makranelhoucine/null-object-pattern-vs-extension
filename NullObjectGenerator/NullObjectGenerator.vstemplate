@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Null Object Pattern Generator</Name>
+    <DefaultName>NullObject.tt</DefaultName>
+    <Description>Permet de generer les classes permettant de repondre au Pattern NullObject</Description>
+    <Icon>NullObject.ico</Icon>
+    <TemplateID>c72f79f1-ec41-4008-86df-ce845c11868b</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Core</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem SubType="" TargetFileName="NullObject.tt" ReplaceParameters="false">NullObject.tt</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="NullObject.Core.ttinclude" ReplaceParameters="false">NullObject.Core.ttinclude</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="NullObject.DefaultValues.ttinclude" ReplaceParameters="false">NullObject.DefaultValues.ttinclude</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="NullObject.Reader.ttinclude" ReplaceParameters="false">NullObject.Reader.ttinclude</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="NullObject.RuntimeCompilator.ttinclude" ReplaceParameters="false">NullObject.RuntimeCompilator.ttinclude</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="Valuable.cs" ReplaceParameters="true">Valuable.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
