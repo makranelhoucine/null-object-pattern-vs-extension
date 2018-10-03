@@ -25,6 +25,6 @@
     <ProjectItem SubType="" TargetFileName="NullObject.DefaultValues.ttinclude" ReplaceParameters="false">NullObject.DefaultValues.ttinclude</ProjectItem>
     <ProjectItem SubType="" TargetFileName="NullObject.Reader.ttinclude" ReplaceParameters="false">NullObject.Reader.ttinclude</ProjectItem>
     <ProjectItem SubType="" TargetFileName="NullObject.RuntimeCompilator.ttinclude" ReplaceParameters="false">NullObject.RuntimeCompilator.ttinclude</ProjectItem>
-    <ProjectItem SubType="" TargetFileName="Valuable.cs" ReplaceParameters="true">Valuable.cs</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="IValuable.cs" ReplaceParameters="true">IValuable.cs</ProjectItem>
   </TemplateContent>
 </VSTemplate>

@@ -105,8 +105,11 @@ public class ExtendOriginalClass
 		content.Append("namespace ");
 		content.AppendLine(@namespace);
 		content.AppendLine("{");
-		content.AppendLine("\tpublic partial class " + this.className + " : Valuable<Null" + this.className +">");
+		content.AppendLine("\tpublic partial class " + this.className + " : IValuable<Null" + this.className +">");
 		content.AppendLine("\t{");
+		content.AppendLine("\t\tpublic static Null" + this.className + " Null { get; } = Null" + this.className + "();");
+		content.AppendLine();
+		content.AppendLine("\t\tpublic virtual bool IsNull => false;");
 		content.AppendLine("\t}");
 		content.Append("}");
 	
@@ -168,11 +171,12 @@ public class NullClassTemplating
 		content.Append("namespace ");
 		content.AppendLine(@namespace);
 		content.AppendLine("{");
-		content.Append("\tpublic partial class ");
+		content.Append("\tpublic sealed partial class ");
 		content.Append(this.Name);
 		content.Append(" : ");
 		content.AppendLine(this.Class.Name);
-		content.Append("\t{");
+		content.AppendLine("\t{");
+		content.AppendLine("\t\tpublic override bool IsNull => true;");
 		foreach(var property in properties)
 		{
 			content.AppendLine();

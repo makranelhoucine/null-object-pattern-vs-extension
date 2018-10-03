@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Valuable.cs" />
+    <None Include="IValuable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="NullObject.Core.ttinclude" />
