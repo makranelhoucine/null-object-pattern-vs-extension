@@ -1,4 +1,4 @@
-﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+﻿<#@ template debug="false" hostspecific="true" language="C#" compilerOptions="/langversion:6" #>
 <#@output extension=".txt"#>
 <#@ include file="NullObject.Core.ttinclude" #>
 <#@ include file="NullObject.Reader.ttinclude" #>
@@ -60,24 +60,29 @@ public class ClassGenerator
 		{
 			var classPath = this.rootPath + "\\" + type.Name + ".cs";
 			var fileContent = File.ReadAllText(classPath);
-			if(!fileContent.Contains("Valuable<Null") || !fileContent.Contains("class Null"))
+			if(fileContent.Contains("Valuable<Null") || fileContent.Contains("class Null"))
 			{
-				var extendOriginalClass = new ExtendOriginalClass(type.Name, fileContent);
-				var content = extendOriginalClass.TransformText();
-				files.Add(new FileItem{
-					Name = type.Name + "Extend.cs",
-					Content = content
-				});
-				nullClassTemplating.Class = type;
-				content = nullClassTemplating.TransformText();
-				files.Add(new FileItem{
-					Name = "Null" + type.Name + ".cs",
-					Content = content
-				});
-
-				var reWriteOriginalClass = new ReWriteOriginalClass(type.Name, fileContent);
-				reWriteOriginalClass.RenderToFile(this.rootPath + "\\" + type.Name + ".cs");
+				continue;
 			}
+			
+            if(!type.GetTypeInfo().IsAbstract)
+            {
+                var extendOriginalClass = new ExtendOriginalClass(type.Name, fileContent);
+                var content = extendOriginalClass.TransformText();
+                files.Add(new FileItem{
+                        Name = type.Name + "Extend.cs",
+                        Content = content
+                        });
+                nullClassTemplating.Class = type;
+                content = nullClassTemplating.TransformText();
+                files.Add(new FileItem{
+                        Name = "Null" + type.Name + ".cs",
+                        Content = content
+                        });
+            }
+
+			var reWriteOriginalClass = new ReWriteOriginalClass(type.Name, fileContent);
+			reWriteOriginalClass.RenderToFile(this.rootPath + "\\" + type.Name + ".cs");
 		}
 
 		return files;
