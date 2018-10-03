@@ -107,7 +107,7 @@ public class ExtendOriginalClass
 		content.AppendLine("{");
 		content.AppendLine("\tpublic partial class " + this.className + " : IValuable<Null" + this.className +">");
 		content.AppendLine("\t{");
-		content.AppendLine("\t\tpublic static Null" + this.className + " Null { get; } = Null" + this.className + "();");
+		content.AppendLine("\t\tpublic static Null" + this.className + " Null { get; } = new Null" + this.className + "();");
 		content.AppendLine();
 		content.AppendLine("\t\tpublic virtual bool IsNull => false;");
 		content.AppendLine("\t}");
@@ -190,7 +190,10 @@ public class NullClassTemplating
 			} else if(!DefaultValues.IsString(type) && DefaultValues.IsEnumerable(type))
 			{
 				var typeOfItem = type.GetElementType()?.FullName ?? type.GenericTypeArguments[0].FullName;
-				fullName = fullName.Remove(fullName.IndexOf('`')) + "<" + typeOfItem + ">";
+				if(!type.IsArray)
+				{
+					fullName = fullName.Remove(fullName.IndexOf('`')) + "<" + typeOfItem + ">";
+				}
 			}
 			
 			content.Append("\t\tpublic override ");
