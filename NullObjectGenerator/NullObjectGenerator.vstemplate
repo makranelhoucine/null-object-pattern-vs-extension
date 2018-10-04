@@ -20,7 +20,7 @@
         <Assembly>System.Core</Assembly>
       </Reference>
     </References>
-    <ProjectItem SubType="" TargetFileName="NullObject.tt" ReplaceParameters="false">NullObject.tt</ProjectItem>
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.tt" ReplaceParameters="true">NullObject.tt</ProjectItem>
     <ProjectItem SubType="" TargetFileName="NullObject.Core.ttinclude" ReplaceParameters="false">NullObject.Core.ttinclude</ProjectItem>
     <ProjectItem SubType="" TargetFileName="NullObject.DefaultValues.ttinclude" ReplaceParameters="false">NullObject.DefaultValues.ttinclude</ProjectItem>
     <ProjectItem SubType="" TargetFileName="NullObject.Reader.ttinclude" ReplaceParameters="false">NullObject.Reader.ttinclude</ProjectItem>

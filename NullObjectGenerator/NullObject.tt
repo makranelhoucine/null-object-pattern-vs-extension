@@ -70,13 +70,13 @@ public class ClassGenerator
                 var extendOriginalClass = new ExtendOriginalClass(type.Name, fileContent);
                 var content = extendOriginalClass.TransformText();
                 files.Add(new FileItem{
-                        Name = type.Name + "Extend.cs",
+                        Name = "$fileinputname$." + type.Name + "Extend.cs",
                         Content = content
                         });
                 nullClassTemplating.Class = type;
                 content = nullClassTemplating.TransformText();
                 files.Add(new FileItem{
-                        Name = "Null" + type.Name + ".cs",
+                        Name = "$fileinputname$.Null" + type.Name + ".cs",
                         Content = content
                         });
             }

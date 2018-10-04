@@ -4,7 +4,7 @@
   <Identifier Id="NullObjectGenerator">
     <Name>NullObject Pattern Generator</Name>
     <Author>Julien Vandenbussche</Author>
-    <Version>1.0.0.2</Version>
+    <Version>1.0.0.3</Version>
     <Description xml:space="preserve">Permet de generer les classes permettant de repondre au Pattern NullObject</Description>
     <Icon>NullObject.ico</Icon>
     <SupportedProducts>
